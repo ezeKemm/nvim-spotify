@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 set -o errexit
-
+echo "Building..."
 version=v0.3.0
 name=neovim-spotify
 
@@ -37,6 +37,6 @@ fetch_prebuilt_binary() {
 
 arch=$(uname)
 case "${arch}" in
-    "Darwin") fetch_prebuilt_binary $name-$version-darwin ;;
+    # "Darwin") fetch_prebuilt_binary $name-$version-darwin ;;
     *) echo "No pre-built binary available for ${arch}."; cargo_build ;;
 esac
