@@ -8,7 +8,7 @@ name=neovim-spotify
 cargo_build() {
     if command -v cargo > /dev/null; then
         echo "Trying to build locally using Cargo.."
-        cargo build --release
+        cargo build 
     else
         echo "Could not build binary. Your installation might be corrupt."
         return 1
