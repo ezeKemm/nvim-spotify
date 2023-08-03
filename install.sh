@@ -17,7 +17,7 @@ cargo_build() {
 
 download() {
     command -v curl > /dev/null && \
-        curl --fail --location "$1" --output target/release/nvim-spotify
+        curl --fail --location "$1" --output target/debug/spotify-vim
 }
 
 
@@ -28,7 +28,7 @@ fetch_prebuilt_binary() {
     mkdir -p target/release
 
     if (download "$url"); then
-        chmod a+x target/release/nvim-spotify
+        chmod a+x target/debug/spotify-vim
         return
     else
         cargo_build || echo "Prebuilt binaries are not ready for this platform."

@@ -5,7 +5,7 @@ endif
 
 " Path to the binary
 let s:scriptdir = resolve(expand('<sfile>:p:h') . '/..')
-let s:bin = s:scriptdir . '/target/release/nvim-spotify'
+let s:bin = s:scriptdir . '/target/debug/spotify-vim'
 
 " RPC message constants
 let s:SpotifyLike = 'like'
