@@ -26,9 +26,9 @@ endfunction
 " get the job id and check for errors. if no errors, attach rpc handlers to
 " the commands.
 function! s:connect()
-  let jobid = s:GetJobID()
+  let jobID = s:GetJobID()
 
-  if 0 == jobid
+  if 0 == jobID
     echoerr "spotify: cannot start rpc process"
   elseif -1 == jobID
     echoerr "spotify: rpc process is not executable"

@@ -5,7 +5,7 @@ use spotify::{Action, Spotify};
 
 #[tokio::main]
 async fn main() {
-    let event_handler = EventHandler::new();
+    let mut event_handler = EventHandler::new();
     event_handler.await.recv().await;
 }
 
