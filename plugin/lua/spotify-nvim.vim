@@ -72,4 +72,4 @@ function! s:rpc(rpcMessage)
 	call rpcnotify(s:spotifyjobid, a:rpcMessage)
 endfunction
 
-call s:init()
+" call s:init()
